@@ -10,16 +10,22 @@ import typingRaceImage from "../public/images/typing_race.png";
 export default function Home(props) {
   const carouselData =  [
     {
+      id: 1,
       img: flashCardImage,
-      title: "Flash Cards Learn"
+      title: "Flash Cards Learn",
+      link: "https://flashcardlearn.herokuapp.com/"
     },
     {
+      id: 2,
       img: mehboobMusicImage,
-      title: "Mehboob Music Official"
+      title: "Mehboob Music Official",
+      link: "https://mehboobmusicofficial.herokuapp.com/"
     },
     {
+      id: 3,
       img: typingRaceImage,
-      title: "Typing Race"
+      title: "Typing Race",
+      link: "https://desolate-beach-76075.herokuapp.com/"
     }
   ]
   return (
@@ -82,13 +88,13 @@ export default function Home(props) {
             <span className="text-white text-4xl absolute top-3">
               Some of my works
             </span>
-            <div>
+            <div className="pt-10">
               <DisplayBox data={carouselData}/>
             </div>
             <DownArrow />
           </div>
         </section>
-        
+
       </main>
     </div>
   );
