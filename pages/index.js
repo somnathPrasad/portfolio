@@ -1,8 +1,27 @@
 import Head from "next/head";
 import DownArrow from "../components/downArrow";
 import Typewriter from "typewriter-effect";
+import utilStyles from "../styles/utils.module.css";
+import DisplayBox from "../components/displayBox";
+import flashCardImage from "../public/images/flash_card.png";
+import mehboobMusicImage from "../public/images/mehboob_music.png";
+import typingRaceImage from "../public/images/typing_race.png";
 
-export default function Home() {
+export default function Home(props) {
+  const carouselData =  [
+    {
+      img: flashCardImage,
+      title: "Flash Cards Learn"
+    },
+    {
+      img: mehboobMusicImage,
+      title: "Mehboob Music Official"
+    },
+    {
+      img: typingRaceImage,
+      title: "Typing Race"
+    }
+  ]
   return (
     <div className="">
       <Head>
@@ -16,35 +35,61 @@ export default function Home() {
         />
         <meta name="author" content="Somnath Prasad" />
         <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+        />
       </Head>
 
       <main className="">
-        <div className="bg-black h-screen flex justify-center items-center flex-col relative">
-          <span className="text-white text-8xl font-semibold text-center">
-            Hello, I am Somnath.
-          </span>
-          <DownArrow />
-        </div>
-        <div className="bg-blue-500 h-screen flex justify-center items-center flex-col relative text-white text-8xl font-semibold text-center">
-          <Typewriter
-          options={{loop:true}}
-            onInit={(typewriter) => {
-              typewriter
-                .typeString("I am a <strong>web developer</strong>")
-                .pauseFor(2500)
-                .deleteChars(13)
-                .pauseFor(20)
-                .typeString("<strong>Student</strong>")
-                .pauseFor(2500)
-                .deleteAll()
-                .start();
-            }}
-          />
-          <DownArrow />
-        </div>
-      </main>
+        <section>
+          <div className="bg-black h-screen flex justify-center items-center flex-col relative">
+            <span className="text-white text-8xl font-semibold text-center">
+              <span className={utilStyles.animationPulseColor}>
+                Hello, I am Somnath.
+              </span>
+            </span>
+            <DownArrow />
+          </div>
+        </section>
 
-      <footer className=""></footer>
+        <section>
+          <div className="h-screen bg-red-500 flex justify-center items-center flex-col relative text-white md:text-8xl text-6xl font-semibold text-center">
+            <Typewriter
+              options={{ loop: true }}
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString("I am a <strong>web developer</strong>")
+                  .pauseFor(2500)
+                  .deleteChars(13)
+                  .pauseFor(20)
+                  .typeString("<strong>learner</strong>")
+                  .pauseFor(2500)
+                  .deleteChars(7)
+                  .pauseFor(20)
+                  .typeString("<strong>coder</strong>")
+                  .pauseFor(2500)
+                  .deleteAll()
+                  .start();
+              }}
+            />
+            <DownArrow />
+          </div>
+        </section>
+
+        <section>
+          <div className="bg-gradient-to-r from-green-400 to-blue-500  h-screen flex justify-center items-center flex-col relative">
+            <span className="text-white text-4xl absolute top-3">
+              Some of my works
+            </span>
+            <div>
+              <DisplayBox data={carouselData}/>
+            </div>
+            <DownArrow />
+          </div>
+        </section>
+        
+      </main>
     </div>
   );
 }
