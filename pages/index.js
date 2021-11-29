@@ -34,14 +34,14 @@ export default function Home(props) {
       <Head>
         <title>Somnath Prasad</title>
         <meta name="description" content="Somnath Prasad Portfolio Website" />
-        <meta name="image" property="og:image" content={og_image} />
+        <meta name="image" property="og:image" content="../public/images/og_image.png" />
         <meta
           name="description"
           property="og:description"
           content="Somnath Prasad Portfolio Website"
         />
         <meta name="author" content="Somnath Prasad" />
-        <link rel="icon" href="/favicon.ico" />
+        {/* <link rel="icon" href="/favicon.ico" /> */}
         <link
           rel="stylesheet"
           href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
