@@ -16,7 +16,7 @@ export default function DisplayBox({ data }) {
                     alt="website image"
                     title={dataset.title}
                   />
-                  <p className="absolute text-white text-2xl md:bottom-10 bottom-5 left-1/2 transform -translate-x-1/2 shadow-2xl">
+                  <p className="absolute text-white w-full text-center text-2xl md:bottom-10 bottom-5 shadow-2xl">
                     {dataset.title}
                   </p>
                 </a>
