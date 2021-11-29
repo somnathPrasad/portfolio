@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function DisplayBox({ data }) {
   return (
     <div>
-      <div className="grid grid-cols-2 gap-x-12 px-20">
+      <div className="grid md:grid-cols-2 grid-cols-1 md:gap-x-12 md:px-20 gap-y-2">
         {data.map((dataset) => {
           return (
             <div className="group" key={dataset.id}>
@@ -16,7 +16,7 @@ export default function DisplayBox({ data }) {
                     alt="website image"
                     title={dataset.title}
                   />
-                  <p className="absolute text-white text-2xl bottom-10 left-1/2 transform -translate-x-1/2 shadow-2xl">
+                  <p className="absolute text-white text-2xl md:bottom-10 bottom-5 left-1/2 transform -translate-x-1/2 shadow-2xl">
                     {dataset.title}
                   </p>
                 </a>
