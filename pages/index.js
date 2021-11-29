@@ -34,7 +34,7 @@ export default function Home(props) {
       <Head>
         <title>Somnath Prasad</title>
         <meta name="description" content="Somnath Prasad Portfolio Website" />
-        <meta name="image" property="og:image" content="https://somnathprasad.vercel.app/public/images/og_image.png" />
+        <meta name="image" property="og:image" content="/public/images/og_image.png" />
         <meta
           name="description"
           property="og:description"
