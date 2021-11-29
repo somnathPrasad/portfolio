@@ -11,7 +11,7 @@ export default function DisplayBox({ data }) {
               <Link href={dataset.link}>
                 <a target="_blank" className="relative">
                   <Image
-                    className="rounded-sm hover:opacity-90"
+                    className="rounded-xl hover:opacity-90"
                     src={dataset.img}
                     alt="website image"
                     title={dataset.title}

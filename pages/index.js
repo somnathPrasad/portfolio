@@ -88,7 +88,7 @@ export default function Home(props) {
             <span className="text-white text-4xl absolute top-3">
               Some of my works
             </span>
-            <div className="pt-10">
+            <div className="md:px-0 px-4 pt-10">
               <DisplayBox data={carouselData}/>
             </div>
             <DownArrow />
