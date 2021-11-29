@@ -6,6 +6,7 @@ import DisplayBox from "../components/displayBox";
 import flashCardImage from "../public/images/flash_card.png";
 import mehboobMusicImage from "../public/images/mehboob_music.png";
 import typingRaceImage from "../public/images/typing_race.png";
+import og_image from '../public/images/og_image.png'
 
 export default function Home(props) {
   const carouselData =  [
@@ -33,7 +34,7 @@ export default function Home(props) {
       <Head>
         <title>Somnath Prasad</title>
         <meta name="description" content="Somnath Prasad Portfolio Website" />
-        <meta name="image" property="og:image" content="[Image URL here]" />
+        <meta name="image" property="og:image" content={og_image} />
         <meta
           name="description"
           property="og:description"
